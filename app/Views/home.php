@@ -254,12 +254,12 @@
         }
         .footer-container {
             width: 100%;
-            height: 15rem;
+            height: 20rem;
             border-top: 1px solid #F8C146;
             background-color: black;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             flex-direction: column;
             /*border: 2px solid red;*/
         }
@@ -271,17 +271,25 @@
             align-content: center;  
             /*border: 2px solid green;*/
         }
-        .footer-col img {
-            max-width: auto;
-            max-height: 50em;
-            flex-shrink: 0;          
-            margin-bottom: 2em;  
-        }
+
         .footer-row {
             display: flex;
             justify-content: center;
             margin-bottom: 1em;
             /*border: 2px solid red;            */
+        }
+
+        .footer-row-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2em 0;
+        }
+
+        .footer-row-logo img {
+            max-width: auto;
+            max-height: 50em;
+            flex-shrink: 0;         
         }
 
         .footer-row ul {
@@ -308,6 +316,13 @@
             font-size: 1.5em;
             padding: 0;
             margin: 0;
+        }
+        .footer-row-rights {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1em 0;
+            color: white;
         }
     </style>
 </head>
@@ -429,7 +444,9 @@
     <!--FOOTER-->
     <div class="footer-container">
         <div class="footer-col">
-            <img src="<?= base_url('public/images/logo.png') ?>" alt="Lakan & Co Logo">
+            <div class="footer-row-logo">
+                <img src="<?= base_url('public/images/logo.png') ?>" alt="Lakan & Co Logo">
+            </div>
             <div class="footer-row">
                 <ul>
                     <li>HOME</li>
@@ -446,6 +463,10 @@
                     <li><i class="fa-brands fa-instagram"></i></li>
                     <li><i class="fa-brands fa-tiktok"></i></li>
                 </ul>
+            </div>
+            <div class="footer-row-rights">
+                <p>&copy; 2025 Lakan & Co. Salon Privé. All rights reserved.</p>
+                <p>For Educational Purposes Only</p>
             </div>
         </div>
     </div>
