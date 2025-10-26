@@ -254,7 +254,8 @@
         }
         .footer-container {
             width: 100%;
-            height: 20rem;
+            min-height: 22rem;
+            padding: 1rem;
             border-top: 1px solid #F8C146;
             background-color: black;
             display: flex;
@@ -276,7 +277,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 1em;
-            /*border: 2px solid red;            */
+            /*border: 2px solid red;*/
         }
 
         .footer-row-logo {
@@ -302,6 +303,13 @@
             margin: 0;
             /*border: 2px solid red;*/
         }
+
+        .footer-row a {
+            color: white;
+        }
+        .footer-row a:link {
+            text-decoration: none;
+        }
         .footer-row-icons {
             display: flex;
             justify-content: center;
@@ -313,9 +321,12 @@
             list-style: none;
             gap: 20px;
             color: white;
-            font-size: 1.5em;
             padding: 0;
             margin: 0;
+        }
+        .footer-row-icons .btn {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 2em;
         }
         .footer-row-rights {
             display: flex;
@@ -449,19 +460,20 @@
             </div>
             <div class="footer-row">
                 <ul>
-                    <li>HOME</li>
-                    <li>OUR SERVICES</li>
-                    <li>OUR PRODUCTS</li>
-                    <li>FAQ</li>
-                    <li>ABOUT US</li>
-                    <li>CONTACT US</li>
+                    <li><a  href="<?= base_url('/') ?>">HOME</a></li>
+                    <li><a  href="<?= base_url('/services') ?>">OUR SERVICES</a></li>
+                    <li><a  href="<?= base_url('/shop') ?>">OUR PRODUCTS</a></li>
+                    <li><a  href="<?= base_url('/ourTeam') ?>">OUR TEAM</a></li>
+                    <li><a  href="<?= base_url('/faq') ?>">FAQ</a></li>
+                    <li><a  href="<?= base_url('/aboutUs') ?>">ABOUT US</a></li>
+                    <li><a  href="<?= base_url('/contactUs') ?>">CONTACT US</a></li>
                 </ul>
             </div>
             <div class="footer-row-icons">
                 <ul>
-                    <li><i class="fa-brands fa-facebook"></i></li>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-tiktok"></i></li>
+                    <button class="btn"><i class="fa-brands fa-facebook"></i></button>
+                    <button class="btn"><i class="fa-brands fa-instagram"></i></button>
+                    <button class="btn"><i class="fa-brands fa-tiktok"></i></button>
                 </ul>
             </div>
             <div class="footer-row-rights">
