@@ -1,0 +1,35 @@
+# Environment files
+.env
+
+# PHP dependencies (Composer)
+vendor/
+
+# Node.js dependencies (if any)
+node_modules/
+
+# Logs and temporary files
+*.log
+*.cache
+*.tmp
+*.bak
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE / editor settings
+.idea/
+.vscode/
+
+# XAMPP / local server files
+htdocs/*.sql
+htdocs/*.sqlite
+*.db
+
+# Build/output directories
+dist/
+build/
+
+# Backup files
+*~
+*.swp
