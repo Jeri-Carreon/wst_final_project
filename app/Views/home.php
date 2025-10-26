@@ -406,8 +406,8 @@
                     <img src="<?= base_url('public/images/productModel.jpg')?>" alt="Salon Service" style="">
                     <div class="text-content">
                         <h1>Products</h1>
-                        <p>Feel refreshed and confident from head to toe with our full range of salon services. From hair care to relaxation treatments, take time to unwind at Lakan & Co Salon Privé.</p>
-                        <a button type="button" id="servicesbtn" href="<?= base_url('/services') ?>" class="btn btn-custom">Our Products</button> </a>
+                        <p>Discover our premium line of beauty essentials designed to keep you feeling refreshed and confident from head to toe. From nourishing hair care to soothing body treatments, We offers everything you need for everyday luxury.</p>
+                        <a button type="button" id="servicesbtn" href="<?= base_url('/products') ?>" class="btn btn-custom">Our Products</button> </a>
                     </div>
                 </div>
             </div>
