@@ -277,6 +277,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 1em;
+            transition: 0.5 ease;
             /*border: 2px solid red;*/
         }
 
@@ -306,6 +307,12 @@
 
         .footer-row a {
             color: white;
+            padding: 0.5em;
+            transition: color 0.3s ease;
+        }
+
+        .footer-row a:hover {
+            color: #F8C146;            
         }
         .footer-row a:link {
             text-decoration: none;
@@ -327,6 +334,10 @@
         .footer-row-icons .btn {
             color: rgba(255, 255, 255, 0.7);
             font-size: 2em;
+        }
+
+        .footer-row-icons .btn:hover {
+            color: #F8C146;
         }
         .footer-row-rights {
             display: flex;
@@ -405,6 +416,7 @@
         </button>
     </div>
     -->
+    <!--Main Body-->
     <div class="flex-container">
         <div class="custom-row first-row">
             <div class="box">
