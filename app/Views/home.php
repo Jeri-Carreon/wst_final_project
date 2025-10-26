@@ -295,9 +295,14 @@
                 font-size: 10vw;
             }
 
+            .box.second .text-content p,
+            .box.third .text-content p {
+                padding: 0 2rem;
+            }
+
             .box.second img,
             .box.third img {
-                max-width: 90%;
+                max-width: 80%;
             }
             #learnmorebtn {
                 font-size: 3vw;
