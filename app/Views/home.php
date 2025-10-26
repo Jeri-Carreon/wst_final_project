@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    
+    <link rel="stylesheet" type="text/css" href="public/css/headerStyleSheet.css">
     <title>Homepage</title>
     <meta name="description" content="The small framework with powerful features">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,63 +18,6 @@
 ``      */
         *{
             font-family: Helvetica, Arial, sans-serif;
-        }
-    
-        nav.navbar {
-            background-color: black;
-            border-bottom: 1px solid #F8C146;
-            transition: 0.3s ease;
-        }
-        nav.navbar.sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 999;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);   
-        }
-        .navbar-brand {
-            margin-left: 20%;
-            color: white !important;
-        }
-        .navbar-nav {
-            margin-left: 35%;
-            font-style: ;
-            color: white;
-        }
-        .nav-link.active {
-            color: #F8C146 !important;
-            border-bottom: 1px solid #F8C146;
-        }
-
-        .nav-link.active, 
-        .nav-link {
-            color: white ;
-            font-size: 12px;
-            transition: color 1s ease;
-        }
-        .nav-link:hover,
-        .nav-link.active:hover {
-            color: #F8C146 !important;
-        }
-        .dropdown-menu {
-            background-color: #111;
-            margin-top: 0; 
-            border: none !important; 
-            box-shadow: none !important;
-        }
-        .dropdown-toggle {
-            color: white;
-        }
-        .dropdown-toggle::after {
-            display: none;
-        }
-        .dropdown-item {
-            color: white;
-            font-size: 12px;
-        }
-        .dropdown-item:hover {
-            background-color: rgba(248, 215, 0, 0.2);
-            color: #F8C146;
         }
         /*BODY*/
         .flex-container {
