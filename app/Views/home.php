@@ -146,7 +146,6 @@
             justify-content: center;
             flex-direction: column;
             text-align: start;
-            padding: 0 5%; /* instead of fixed left padding */
             box-sizing: border-box; /* include padding in width */
             /*border: 3px solid black;*/
         
@@ -171,7 +170,7 @@
         }
 
         .first-row .box {
-            padding-left: 5%;
+            /*padding-left: 5%;*/ /*Beauty Made Simple box padding*/
         }
         .first-row .box h1 {
             font-size: 5vw;
