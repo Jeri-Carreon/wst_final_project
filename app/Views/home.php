@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    
     <link rel="stylesheet" type="text/css" href="public/css/headerStyleSheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css">
     <title>Homepage</title>
     <meta name="description" content="The small framework with powerful features">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -250,10 +251,45 @@
             #learnmorebtn {
                 font-size: 3vw;
             }
-
-
+        }
+        .footer-container {
+            width: 100%;
+            height: 15rem;
+            border-top: 1px solid #F8C146;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /*border: 2px solid red;*/
+        }
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;            
+            /*border: 2px solid green;*/
+        }
+        .footer-col img {
+            max-width: auto;
+            max-height: 50em;
+            flex-shrink: 0;          
+            margin-bottom: 2em;  
+        }
+        .footer-row {
+            display: flex;
+            
         }
 
+        .footer-row ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            color: white;
+            font-size: 0.8em;
+            /*border: 2px solid red;*/
+        }
     </style>
 </head>
 <body>
@@ -372,6 +408,22 @@
     </div>
 
     <!--FOOTER-->
+    <div class="footer-container">
+        <div class="footer-col">
+            <img src="<?= base_url('public/images/logo.png') ?>" alt="Lakan & Co Logo">
+            <div class="footer-row">
+                <ul>
+                    <li>HOME</li>
+                    <li>OUR SERVICES</li>
+                    <li>OUR PRODUCTS</li>
+                    <li>FAQ</li>
+                    <li>ABOUT US</li>
+                    <li>CONTACT US</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<i class="fa-brands fa-facebook"></i>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script>
         window.addEventListener('scroll', function() {
