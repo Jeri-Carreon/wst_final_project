@@ -471,9 +471,9 @@
             </div>
             <div class="footer-row-icons">
                 <ul>
-                    <button class="btn"><i class="fa-brands fa-facebook"></i></button>
-                    <button class="btn"><i class="fa-brands fa-instagram"></i></button>
-                    <button class="btn"><i class="fa-brands fa-tiktok"></i></button>
+                    <button class="btn" onclick="window.location.href='https://facebook.com/profile.php?id=61580202315598&sk=about';"><i class="fa-brands fa-facebook"></i></button>
+                    <button class="btn" onclick="window.location.href='https://instagram.com';"><i class="fa-brands fa-instagram"></i></button>
+                    <button class="btn" onclick="window.location.href='https://tiktok.com';"><i class="fa-brands fa-tiktok"></i></button>
                 </ul>
             </div>
             <div class="footer-row-rights">
