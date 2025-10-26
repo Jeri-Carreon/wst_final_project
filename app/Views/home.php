@@ -268,7 +268,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            align-content: center;            
+            align-content: center;  
             /*border: 2px solid green;*/
         }
         .footer-col img {
@@ -279,7 +279,9 @@
         }
         .footer-row {
             display: flex;
-            
+            justify-content: center;
+            margin-bottom: 1em;
+            /*border: 2px solid red;            */
         }
 
         .footer-row ul {
@@ -288,7 +290,24 @@
             gap: 30px;
             color: white;
             font-size: 0.8em;
+            padding: 0;
+            margin: 0;
             /*border: 2px solid red;*/
+        }
+        .footer-row-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*border: 2px solid red;*/
+        }
+        .footer-row-icons ul{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            color: white;
+            font-size: 1.5em;
+            padding: 0;
+            margin: 0;
         }
     </style>
 </head>
@@ -421,9 +440,16 @@
                     <li>CONTACT US</li>
                 </ul>
             </div>
+            <div class="footer-row-icons">
+                <ul>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-tiktok"></i></li>
+                </ul>
+            </div>
         </div>
     </div>
-<i class="fa-brands fa-facebook"></i>
+    <script src="https://kit.fontawesome.com/154041df64.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script>
         window.addEventListener('scroll', function() {
