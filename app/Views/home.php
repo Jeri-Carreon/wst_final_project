@@ -19,6 +19,11 @@
 ``      */
         *{
             font-family: Helvetica, Arial, sans-serif;
+            
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
         }
         /*BODY*/
         .flex-container {
@@ -171,13 +176,14 @@
             display: flex;
             justify-content: center;
             padding: 50px 0;
+
         }
         .box.third {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
 
-            padding-top: 5rem;
+            padding: 5em 0;
 
             background-color: #1d1d1dff;
         }
