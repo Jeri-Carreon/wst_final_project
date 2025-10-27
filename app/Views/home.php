@@ -146,10 +146,15 @@
             font-size: 1vw;
         }
 
-        #servicesbtn {
+        #servicesProductsbtn {
             background-color: black;
             border: 2px solid black;
             color: white;
+        }
+        #servicesProductsbtn:hover {
+            background-color: black;
+            border: 2px solid #F8C146;
+            color: #F8C146;
         }
 
         .box.second, .box.third {
@@ -438,7 +443,7 @@
                 <div class="text-content">
                     <h1>Services</h1>
                     <p>Feel refreshed and confident from head to toe with our full range of salon services. From hair care to relaxation treatments, take time to unwind at Lakan & Co Salon Privé.</p>
-                    <a button type="button" id="servicesbtn" href="<?= base_url('/services') ?>" class="btn btn-custom">Our Services</button> </a>
+                    <a button type="button" id="servicesProductsbtn" href="<?= base_url('/services') ?>" class="btn btn-custom">Our Services</button> </a>
                 </div>
                 <img src="<?= base_url('public/images/nails1.jpg')?>" alt="Salon Service" style="">
             </div>
@@ -450,7 +455,7 @@
                     <div class="text-content">
                         <h1>Products</h1>
                         <p>Discover our premium line of beauty essentials designed to keep you feeling refreshed and confident from head to toe. From nourishing hair care to soothing body treatments, We offers everything you need for everyday luxury.</p>
-                        <a button type="button" id="servicesbtn" href="<?= base_url('/products') ?>" class="btn btn-custom">Our Products</button> </a>
+                        <a button type="button" id="servicesProductsbtn" href="<?= base_url('/products') ?>" class="btn btn-custom">Our Products</button> </a>
                     </div>
                 </div>
             </div>
