@@ -74,6 +74,17 @@
             flex-direction: column;
             justify-content: flex-start;
         }
+
+        .first-row .button-row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .first-row .button-row {
+            font-size: ;
+        }
         .custom-row {
             display: flex;
             justify-content: center;
@@ -434,7 +445,10 @@
                 <div class="text-content">
                     <h1>Beauty made simple.</h1>
                     <p>Because feeling good never goes out of style.</p>
-                    <a button type="button" id="learnmorebtn" href="<?= base_url('/services') ?>" class="btn btn-custom">Learn More</button> </a>
+                    <div class="button-row">
+                        <a button type="button" id="learnmorebtn" href="<?= base_url('/services') ?>" class="btn btn-custom">Learn More</button> </a>
+                        <a button type="button" id="learnmorebtn" href="<?= base_url('/bookNow') ?>" class="btn btn-custom">Book Now</button> </a>
+                    </div>
                 </div>
             </div>
         </div>
