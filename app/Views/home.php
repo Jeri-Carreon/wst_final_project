@@ -82,9 +82,6 @@
             gap: 20px;
         }
 
-        .first-row .button-row {
-            font-size: ;
-        }
         .custom-row {
             display: flex;
             justify-content: center;
@@ -269,6 +266,57 @@
             .box.second img,
             .box.third img {
                 max-width: 80%;
+            }
+            #learnmorebtn {
+                font-size: 3vw;
+            }
+        }
+        @media (max-width: 1024px) {
+            body, html {
+                overflow-x: hidden;
+            }
+            .first-row .box h1 {
+                font-size: 4vw; /* scale text for small screens */
+            }
+            .first-row .box p {
+                font-size: 3vw;
+            }
+
+            .navbar-brand {
+                margin-left: 10px; /* smaller margin on mobile */
+            }
+
+            .first-row .button-row{
+                
+            }
+            .box,
+            .box.second,
+            .box.third {
+                flex-direction: column; /* stack text + image */
+                text-align: center;
+                align-items: center
+            }
+            .box .text-content,
+            .box.second .text-content,
+            .box.third .text-content {
+                margin-left: 0;
+                padding: 0;
+                align-items: center;
+            }
+
+            .box.second .text-content h1,
+            .box.third .text-content h1 {
+                font-size: 5vw;
+            }
+
+            .box.second .text-content p,
+            .box.third .text-content p {
+                padding: 0 2rem;
+            }
+
+            .box.second img,
+            .box.third img {
+                max-width: 70%;
             }
             #learnmorebtn {
                 font-size: 3vw;
