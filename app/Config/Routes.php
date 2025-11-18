@@ -10,6 +10,12 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('register', 'RegisterForm::index');
 $routes->post('register', 'RegisterForm::submit');
 
+$routes->get('login', 'Login::index');
+$routes->post('login/submit', 'Login::submit');
+$routes->get('logout', 'Login::logout');
+
+
+
 
 $routes->get('register-success', 'Auth::registerSuccess');
 

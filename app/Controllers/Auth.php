@@ -44,4 +44,5 @@ class Auth extends BaseController
     {
         return view('auth/register_success');
     }
+
 }
