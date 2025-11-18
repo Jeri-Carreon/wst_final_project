@@ -15,26 +15,25 @@ class Login extends Controller
 
     public function submit()
     {
-        helper(['form', 'url']);
-        $userModel = new UserModel();
-
-        $email = $this->request->getPost('email');
+        $email    = $this->request->getPost('email');
         $password = $this->request->getPost('password');
 
-        // Find user by email
+        $userModel = new \App\Models\UserModel();
         $user = $userModel->where('email', $email)->first();
 
-        if (!$user || !password_verify($password, $user['password'])) {
-            echo view('auth/login', ['error' => 'Invalid email or password.']);
-        } else {
-            // Login success
+        if ($user && password_verify($password, $user['password'])) {
             session()->set([
-                'user_id'   => $user['id'],
-                'name'  => $user['name'],
-                'isLoggedIn'=> true
+                'id'         => $user['id'],
+                'name'       => $user['name'],
+                'email'      => $user['email'],
+                'role'       => $user['role'] ?? 'customer', // <- ensure role is set
+                'isLoggedIn' => true,
             ]);
-            echo view('auth/login-success', ['name' => $user['name']]);
+            return redirect()->to('/home');
         }
+
+        session()->setFlashdata('error', 'Invalid credentials');
+        return redirect()->back()->withInput();
     }
 
     public function logout() 

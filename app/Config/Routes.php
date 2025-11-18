@@ -6,7 +6,9 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-
+// REGISTRATION & LOGIN
+$routes->get('/', 'Home::index');
+$routes->get('/home', 'Home::index');
 $routes->get('register', 'RegisterForm::index');
 $routes->post('register', 'RegisterForm::submit');
 
@@ -21,7 +23,7 @@ $routes->get('register-success', 'Auth::registerSuccess');
 
 
 $routes->setDefaultController('Home'); // InfinityFree Route for it to work
-$routes->get('/', 'Home::index');
+$routes->setDefaultMethod('index');
 //$routes->get('/home', 'Home::index');
 
 

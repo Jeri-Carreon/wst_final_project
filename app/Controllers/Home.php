@@ -4,8 +4,12 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        return view('home');
+        if (session()->get('isLoggedIn')) {
+            return view('home');
+        } else {
+            return redirect()->to('/login');
+        }
     }
 }
