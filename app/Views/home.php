@@ -270,6 +270,15 @@
             #learnmorebtn {
                 font-size: 3vw;
             }
+            .footer-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 2vh 10vw;
+            }
+            .footer-row li {
+                flex: 1 1 calc(25% - 10px);
+            }
         }
         @media (max-width: 1024px) {
             body, html {
@@ -355,7 +364,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 2em 0;
+            padding: 2vh 0;
         }
 
         .footer-row-logo img {
@@ -366,6 +375,7 @@
 
         .footer-row ul {
             display: flex;
+            flex-wrap: wrap;
             list-style: none;
             gap: 30px;
             color: white;
