@@ -1,12 +1,122 @@
-</body>
-</html>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Signup Form</title>
+    <meta charset="UTF-8">
+    <title>Create an Account</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /* ---- Reset ---- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", Arial, sans-serif;
+        }
+
+        body {
+            background: #1A1A1A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* ---- Container ---- */
+        .register-container {
+            background: #ffffff;
+            width: 400px;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* ---- Inputs ---- */
+        label {
+            font-size: 14px;
+            color: #555;
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: 0.25s;
+        }
+
+        input:focus, select:focus {
+            border-color: #4c82ff;
+            box-shadow: 0 0 0 2px rgba(76,130,255,0.2);
+        }
+
+        /* ---- Button ---- */
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #FCB146;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            transition: 0.25s;
+        }
+
+        button:hover {
+            background: #dcaa3eff;
+        }
+
+        /* ---- Login Link ---- */
+        .login-text {
+            text-align: center;
+            margin-top: 15px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .login-text a {
+            color: #4c82ff;
+            text-decoration: none;
+        }
+
+        .login-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Error message --- */
+        .error {
+            background: #ffe5e5;
+            color: #d8000c;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        #adminCodeRow {
+            margin-top: 12px;
+        }
+    </style>
 
     <script>
         // --- Client-side validation ---
@@ -40,13 +150,11 @@
                 return false;
             }
 
-            // If registering as admin, ensure admin code is provided and correct (client-side check)
             if (role === "admin") {
                 if (adminCode === "") {
                     alert("Admin code is required for admin registration.");
                     return false;
                 }
-                // NOTE: Keep server-side check authoritative. This is only UX convenience.
                 if (adminCode !== "Admin123") {
                     alert("Invalid admin code.");
                     return false;
@@ -56,7 +164,6 @@
             return true;
         }
 
-        // toggle admin code field visibility
         function toggleAdminCodeField() {
             const roleSelect = document.getElementById('role');
             const adminRow = document.getElementById('adminCodeRow');
@@ -74,20 +181,16 @@
         document.addEventListener('DOMContentLoaded', function () {
             const roleSelect = document.getElementById('role');
             roleSelect.addEventListener('change', toggleAdminCodeField);
-            toggleAdminCodeField(); // initial state
+            toggleAdminCodeField();
         });
     </script>
 
-    <style>
-        /* minimal styling */
-        body { font-family: Arial, sans-serif; padding: 16px; color:#222; background:#fff; }
-        label { display:block; margin-top:8px; }
-        input, select { width:100%; max-width:360px; padding:8px; margin-top:4px; }
-        .error { color: #c00; margin: 8px 0; }
-        #adminCodeRow { margin-top:8px; }
-    </style>
 </head>
+
 <body>
+
+<div class="register-container">
+
     <h2>Create an Account</h2>
 
     <?php if (isset($validation)): ?>
@@ -97,35 +200,38 @@
     <?php endif; ?>
 
     <form name="signupForm" action="<?= base_url('register') ?>" method="post" onsubmit="return validateForm();">
-        <label for="name">Name:</label>
+
+        <label>Name</label>
         <input id="name" type="text" name="name" value="<?= set_value('name') ?>">
 
-        <label for="email">Email:</label>
+        <label>Email</label>
         <input id="email" type="email" name="email" value="<?= set_value('email') ?>">
 
-        <label for="password">Password:</label>
-        <input id="password" type="password" name="password" value="<?= set_value('password') ?>">
+        <label>Password</label>
+        <input id="password" type="password" name="password">
 
-        <label for="confirm">Confirm Password:</label>
-        <input id="confirm" type="password" name="confirm" value="<?= set_value('confirm') ?>">
+        <label>Confirm Password</label>
+        <input id="confirm" type="password" name="confirm">
 
-        <label for="role">Role:</label>
+        <label>Role</label>
         <select id="role" name="role">
             <option value="customer" <?= set_value('role') == 'customer' ? 'selected' : '' ?>>Customer</option>
             <option value="admin" <?= set_value('role') == 'admin' ? 'selected' : '' ?>>Admin</option>
         </select>
 
-        <!-- Admin code row: shown/hidden based on role. disabled when hidden so not submitted. -->
         <div id="adminCodeRow" style="<?= set_value('role') == 'admin' ? 'display:block;' : 'display:none;' ?>">
-            <label for="admin_code">Admin Code (if registering as Admin):</label>
+            <label>Admin Code (Admin Only)</label>
             <input id="admin_code" type="text" name="admin_code" value="<?= set_value('admin_code') ?>" <?= set_value('role') == 'admin' ? '' : 'disabled' ?>>
         </div>
 
-        <div style="margin-top:12px;">
-            <button type="submit">Register</button>
-        </div>
+        <button type="submit">Register</button>
     </form>
 
-    <p>Already have an account? <a href="<?= base_url('login') ?>"> Login here</a></p>
+    <p class="login-text">
+        Already have an account?
+        <a href="<?= base_url('login') ?>">Login here</a>
+    </p>
+</div>
+
 </body>
 </html>

@@ -16,6 +16,10 @@ $routes->get('login', 'Login::index');
 $routes->post('login/submit', 'Login::submit');
 $routes->get('logout', 'Login::logout');
 
+//Profile
+$routes->get('profile', 'Profile::index');
+$routes->post('profile/submit', 'Profile::submit');
+
 
 
 

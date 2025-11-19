@@ -8,7 +8,7 @@ class RegisterForm extends BaseController
 {
     protected $helpers = ['form'];
 
-    private const ADMIN_CODE = 'Admin123'; // hard-coded admin code
+    private const ADMIN_CODE = 'Admin123'; // admin registration code
 
     public function index()
     {
